@@ -7,9 +7,9 @@ function markerSize(mag) {
 
 function markerColor(mag) {
     if (mag <= 1) {
-        return "#CCFF33";
+        return "#80ff80";
     } else if (mag <= 2) {
-        return "#FFD033";
+        return "#ccff66";
     } else if (mag <= 3) {
         return "#F99B0F";
     } else if (mag <= 4) {
@@ -17,7 +17,7 @@ function markerColor(mag) {
     } else if (mag <= 5) {
         return "#E65908";
     } else {
-        return "#F65713";
+        return "#993333";
     };
 }
 
@@ -42,7 +42,7 @@ function createFeatures(earthquakeData) {
                     radius: markerSize(feature.properties.mag),
                     fillColor: markerColor(feature.properties.mag),
                     fillOpacity: 1,
-                    stroke: false,
+                    stroke: true,
                 })
         }
     });
